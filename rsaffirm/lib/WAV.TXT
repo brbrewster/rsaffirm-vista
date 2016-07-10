@@ -1,0 +1,58 @@
+-------------------------------------------------------------------------------
+                       WAV.EXE - Play .WAV and .MID files
+        Copyright (c) 1998-2001 by WebGeek, Inc. (dave@basicguru.com)
+-------------------------------------------------------------------------------
+
+I am the type of person who changes the default sound events in Windows
+95/98/NT all the time.  I'll spend several hours each month downloading
+various .WAV files from the internet.
+
+However, some times I'll forget what's in a particular .WAV file and I'll
+want to listen to it.  Since I am a DOS/CMD prompt kind of guy and most
+.WAV players are GUI apps, I wrote WAV to play a single WAV file from a
+command prompt.  It's also useful in batch files.
+
+Thanks to Lockergnome and ZdNet, WAV has been very popular.  Many of you
+emailed me requesting that I allow you to abort a .WAV file by pressing the
+Esc key.  So, I've added that feature.  And since I had to switch from using
+the ever simplistic sndPlaySound() API call to mciSendString(), I also added
+the ability to play any audio file supported by Windows.  And, I've added a
+"/Q" command line switch to prevent WAV from displaying my copyright
+information and the name of the file it's playing.  This should help make your
+batch files prettier.
+
+With version 2.2, you can now specify the number of times you'd like to
+repeat a WAV or MIDI file using the "/R" command line switch.
+
+With version 2.4, you can now play any audio file supported by Windows.  If
+you download the latest version of the Windows Media Player from Microsoft
+(www.microsoft.com/windows/mediaplayer/) you can use WAV to play Wav Audio
+(.WAV), Midi (.MID, .RMI), MP3 Audio (.MP3), and others.
+
+Version 2.4 also fixes a bug...  You can now play files with long filenames
+and embedded spaces.
+
+With version 2.5, you can control the volume using the "/V" command line
+switch:
+
+  /V100 is 100% or full volume
+  /V50  is 50% or half volume
+  /V0   is 0% or complete silence
+
+With version 2.51, an error level is now returned if WAV is unable to play a
+file.
+
+With version 2.65 if you specify -1 in the /R option, the media file will play
+continuosly until ESC is pressed.
+
+This product is freeware.  There is no fee for personal use.  It may not be
+distributed as part of a commercial product without this original text file
+describing the product.
+
+If you have any comments or suggestions, please feel free to email me.  The
+latest version of this product may be downloaded from my web site at
+http://www.basicguru.com/cmdtools/
+
+Thanks!
+
+--Dave

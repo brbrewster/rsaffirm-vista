@@ -1,0 +1,1 @@
+"%homedrive%\rsaffirm\lib\wav" %homedrive%\rsaffirm\lib\affirmations.wav /q
